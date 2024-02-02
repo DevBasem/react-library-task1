@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <Mainpage />,
     children: [
       {
-        path: "/",
+        path: "react-library-task1/",
         element: <Homeroute />,
       },
       {
