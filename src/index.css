@@ -1,0 +1,217 @@
+/* ~~~~~~~~~~\ General \~~~~~~~~~~ */
+:root {
+  --main-color: #1abc9c;
+  --second-color: #2c3e50;
+  --second2-color: #1a252f;
+  --accent-color: #1abc9ce6;
+}
+
+input {
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  min-height: 60px;
+  background-color: #fff !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  outline: 0 none;
+}
+/* ~~~~~~~~~~\ Custom Classes \~~~~~~~~~~ */
+.main__bg-clr {
+  background-color: var(--main-color);
+}
+
+.sec__bg-clr {
+  background-color: var(--second-color) !important;
+}
+
+.sec2__bg-clr {
+  background-color: var(--second2-color);
+}
+
+.accent__bg-clr {
+  background-color: var(--accent-color);
+}
+
+.sec__clr {
+  color: var(--second-color);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.main-nav {
+  min-height: 6.5rem;
+}
+
+.nav-link {
+  border-radius: 0.8rem;
+}
+
+.nav-link.active {
+  background-color: var(--accent-color);
+}
+
+/* .nav-link-wrapper {
+  background-color: red;
+  width: fit-content;
+  margin-left: auto;
+} */
+
+.home {
+  padding-block: 5rem;
+}
+
+.line {
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+}
+
+.info {
+  padding-block: 4rem;
+}
+
+.info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  column-gap: 0.5rem;
+  row-gap: 4rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location p {
+  text-align: center;
+  line-height: 1.8;
+  margin-inline: auto;
+  max-width: 12rem;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.social-link:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.web {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.freelancer p {
+  line-height: 1.8;
+  margin-inline: auto;
+  max-width: 18rem;
+}
+
+.about {
+  min-height: 35rem;
+  padding-block: 5rem;
+}
+
+.portfolio__card {
+  border-radius: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio__card .overlay {
+  position: absolute;
+  background-color: var(--accent-color);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  font-size: 6rem;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.portfolio__card:hover .overlay {
+  opacity: 90%;
+}
+
+.portfolio__card-view {
+  position: fixed;
+  overflow-y: hidden;
+  z-index: 9999;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-block: 5rem;
+}
+
+.portfolio__card-view .card-view {
+  width: 40rem;
+}
+
+.portfolio__card-view .card-view img {
+  object-fit: cover;
+}
+
+.form {
+  margin-inline: auto;
+  max-width: 45rem;
+}
+
+.input-label {
+  padding-left: 0.7rem;
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.input-label.visible {
+  opacity: 1;
+  color: var(--accent-color);
+  transform: translateY(0);
+}
+
+.input-label.hidden {
+  opacity: 0;
+  transform: translateY(17.3px);
+  pointer-events: none;
+  position: absolute;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-color);
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    width: fit-content;
+  }
+}
