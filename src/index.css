@@ -30,6 +30,13 @@ input[type="email"]:focus {
   background-color: var(--second-color) !important;
 }
 
+.onNavScroll {
+  background-color: rgba(44, 62, 80, 0.9) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  min-height: 0px !important;
+}
+
 .sec2__bg-clr {
   background-color: var(--second2-color);
 }
@@ -48,21 +55,22 @@ input[type="email"]:focus {
 
 .main-nav {
   min-height: 6.5rem;
+  transition: all 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .nav-link {
   border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+.nav-link:nth-child(1),
+.nav-link:nth-child(2) {
+  margin-right: 0.5rem;
 }
 
 .nav-link.active {
   background-color: var(--accent-color);
 }
-
-/* .nav-link-wrapper {
-  background-color: red;
-  width: fit-content;
-  margin-left: auto;
-} */
 
 .home {
   padding-block: 5rem;
